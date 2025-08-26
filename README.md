@@ -175,32 +175,4 @@ const newElement = document.querySelector('.new-element');
 observer.observe(newElement);
 ```
 
-## 🤝 Contributing
-
-1. Fork the project
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
-## 🙏 Acknowledgments
-
-- **Font Awesome** for the beautiful icons
-- **Google Fonts** for the Inter font family
-- **Modern CSS** techniques and best practices
-- **Web animation** community for inspiration
-
-## 📞 Support
-
-For questions or support:
-- Create an issue in the repository
-- Contact the development team
-- Check the documentation
-
----
-
 **Built with ❤️ for the English AI Assistant project**
