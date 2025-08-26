@@ -1,17 +1,9 @@
-version: '3.8'
-
 services:
-  english-ai-assistant:
+  web-english-ai-assistant:
     build: .
-    container_name: english-ai-assistant
+    container_name: web-english-ai-assistant
     ports:
-      - "8161:80"
+      - 8161:80
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
     restart: unless-stopped
-    networks:
-      - english-ai-network
-
-networks:
-  english-ai-network:
-    driver: bridge
