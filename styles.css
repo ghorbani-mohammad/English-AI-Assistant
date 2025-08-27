@@ -365,7 +365,7 @@ body {
 .demo-video {
   border-radius: 20px;
   object-fit: contain;
-  max-height: 280px;
+  max-height: 200px;
 }
 
 .video-overlay {
@@ -705,7 +705,7 @@ body {
   
   .demo-video {
     border-radius: 15px;
-    max-height: 240px;
+    max-height: 180px;
   }
   
   .video-wrapper {
