@@ -352,10 +352,7 @@ body {
   background: white;
 }
 
-.demo-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
+/* Demo container now uses Bootstrap grid */
 
 .video-wrapper {
   position: relative;
@@ -366,10 +363,9 @@ body {
 }
 
 .demo-video {
-  width: 100%;
-  height: auto;
-  display: block;
   border-radius: 20px;
+  object-fit: contain;
+  max-height: 350px;
 }
 
 .video-overlay {
@@ -709,6 +705,11 @@ body {
   
   .demo-video {
     border-radius: 15px;
+    max-height: 300px;
+  }
+  
+  .video-wrapper {
+    margin: 0 1rem;
   }
   
   .video-overlay {
