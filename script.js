@@ -282,6 +282,52 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(rippleStyle);
+
+    // Video player enhancements
+    const demoVideo = document.getElementById('demo-video');
+    if (demoVideo) {
+        // Add custom video controls styling
+        demoVideo.addEventListener('loadedmetadata', function() {
+            // Add custom poster image when video loads
+            if (this.poster) {
+                this.style.backgroundImage = `url(${this.poster})`;
+                this.style.backgroundSize = 'cover';
+                this.style.backgroundPosition = 'center';
+            }
+        });
+
+        // Add play/pause overlay
+        demoVideo.addEventListener('play', function() {
+            this.parentElement.querySelector('.video-overlay').style.opacity = '0';
+        });
+
+        demoVideo.addEventListener('pause', function() {
+            this.parentElement.querySelector('.video-overlay').style.opacity = '1';
+        });
+
+        // Add click to play functionality on the overlay
+        const videoOverlay = demoVideo.parentElement.querySelector('.video-overlay');
+        if (videoOverlay) {
+            videoOverlay.addEventListener('click', function() {
+                if (demoVideo.paused) {
+                    demoVideo.play();
+                } else {
+                    demoVideo.pause();
+                }
+            });
+        }
+
+        // Add video progress tracking
+        demoVideo.addEventListener('timeupdate', function() {
+            const progress = (this.currentTime / this.duration) * 100;
+            // You can add a custom progress bar here if needed
+        });
+
+        // Add video ended event
+        demoVideo.addEventListener('ended', function() {
+            this.parentElement.querySelector('.video-overlay').style.opacity = '1';
+        });
+    }
 });
 
 // Add loading animation

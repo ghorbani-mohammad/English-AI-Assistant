@@ -149,23 +149,33 @@
             </div>
             
             <div class="demo-container">
-                <div class="video-placeholder">
-                    <div class="video-content">
-                        <i class="fas fa-play-circle"></i>
-                        <h3>Demo Video Coming Soon</h3>
-                        <p>Watch how the English AI Assistant helps you learn grammar and expressions through interactive voice and text conversations</p>
-                        <div class="demo-features">
-                            <div class="demo-feature">
-                                <i class="fas fa-microphone"></i>
-                                <span>Voice Interaction</span>
-                            </div>
-                            <div class="demo-feature">
-                                <i class="fas fa-keyboard"></i>
-                                <span>Text Chat</span>
-                            </div>
-                            <div class="demo-feature">
-                                <i class="fas fa-brain"></i>
-                                <span>AI-Powered Learning</span>
+                <div class="video-wrapper">
+                    <video 
+                        id="demo-video" 
+                        class="demo-video" 
+                        controls 
+                        preload="metadata"
+                        poster="https://raw.githubusercontent.com/ghorbani-mohammad/Flutter-English-AI-Assistant/main/screenshot-01.png">
+                        <source src="media/english-ai.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay">
+                        <div class="video-info">
+                            <h3>English AI Assistant Demo</h3>
+                            <p>Watch how the English AI Assistant helps you learn grammar and expressions through interactive voice and text conversations</p>
+                            <div class="demo-features">
+                                <div class="demo-feature">
+                                    <i class="fas fa-microphone"></i>
+                                    <span>Voice Interaction</span>
+                                </div>
+                                <div class="demo-feature">
+                                    <i class="fas fa-keyboard"></i>
+                                    <span>Text Chat</span>
+                                </div>
+                                <div class="demo-feature">
+                                    <i class="fas fa-brain"></i>
+                                    <span>AI-Powered Learning</span>
+                                </div>
                             </div>
                         </div>
                     </div>
