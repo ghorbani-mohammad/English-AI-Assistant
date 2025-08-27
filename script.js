@@ -26,9 +26,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav-menu');
     
     if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
+        // Add touch events for better mobile support
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        });
+        
+        // Add touch event for mobile
+        hamburger.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
     }
 
@@ -38,7 +50,28 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             hamburger.classList.remove('active');
+            document.body.classList.remove('menu-open');
         });
+    });
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navMenu && navMenu.classList.contains('active')) {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.classList.remove('menu-open');
+            }
+        }
+    });
+    
+    // Close mobile menu on window resize (when switching from mobile to desktop)
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navMenu && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        }
     });
 
     // Navbar background on scroll
