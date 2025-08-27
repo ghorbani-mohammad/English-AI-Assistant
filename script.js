@@ -118,16 +118,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add hover effects to phone mockups
-    const phoneMockups = document.querySelectorAll('.phone-screen, .phone-frame');
-    phoneMockups.forEach(mockup => {
-        mockup.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.05) rotateY(5deg)';
+    // Add hover effects to screenshot images
+    const screenshotImages = document.querySelectorAll('.screenshot-img');
+    screenshotImages.forEach(img => {
+        img.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
             this.style.transition = 'transform 0.3s ease';
         });
         
-        mockup.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1) rotateY(0deg)';
+        img.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
         });
     });
 

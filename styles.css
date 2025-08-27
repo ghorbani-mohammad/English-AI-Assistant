@@ -453,107 +453,28 @@ body {
 }
 
 .screenshot-image {
-  padding: 2rem;
+  padding: 1rem;
   background: #f3f4f6;
   min-height: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.phone-frame {
-  width: 200px;
-  height: 350px;
-  background: #1f2937;
-  border-radius: 20px;
-  padding: 15px;
-  position: relative;
-}
-
-.phone-frame::before {
-  content: '';
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 3px;
-  background: #374151;
-  border-radius: 2px;
-}
-
-.screen-content {
-  background: white;
-  height: 100%;
-  border-radius: 12px;
-  padding: 15px;
+  border-radius: 15px;
   overflow: hidden;
 }
 
-.app-header h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 5px;
-  text-align: center;
+.screenshot-img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.app-header p {
-  font-size: 0.75rem;
-  color: #6b7280;
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.menu-items, .lesson-content, .expression-content, .chat-content {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.menu-item, .lesson-item, .expression-item {
-  background: #f3f4f6;
-  padding: 10px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.menu-item i, .lesson-item i, .expression-item i {
-  font-size: 1rem;
-  color: #6366f1;
-  margin-bottom: 5px;
-  display: block;
-}
-
-.menu-item span, .lesson-item h4, .expression-item h4 {
-  font-size: 0.75rem;
-  font-weight: 500;
-  display: block;
-}
-
-.lesson-item p, .expression-item p {
-  font-size: 0.625rem;
-  color: #6b7280;
-  margin-top: 3px;
-}
-
-.chat-message {
-  padding: 8px 12px;
-  border-radius: 12px;
-  font-size: 0.75rem;
-  max-width: 80%;
-}
-
-.chat-message.user {
-  background: #6366f1;
-  color: white;
-  align-self: flex-end;
-  margin-left: auto;
-}
-
-.chat-message.ai {
-  background: #f3f4f6;
-  color: #333;
-  align-self: flex-start;
+.screenshot-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
 .screenshot-card h4 {
@@ -753,13 +674,7 @@ body {
     grid-template-columns: 1fr;
   }
   
-  .phone-screen {
-    width: 240px;
-    height: 400px;
-  }
-  
-  .phone-frame {
-    width: 160px;
-    height: 280px;
+  .screenshot-img {
+    max-width: 250px;
   }
 }
