@@ -384,7 +384,8 @@ body.menu-open {
 .demo-video {
   border-radius: 20px;
   object-fit: contain;
-  max-height: 200px;
+  max-height: 500px;
+  min-height: 400px;
 }
 
 .video-overlay {
@@ -782,7 +783,8 @@ body.menu-open {
   
   .demo-video {
     border-radius: 15px;
-    max-height: 180px;
+    max-height: 350px;
+    min-height: 250px;
   }
   
   .video-wrapper {
